@@ -8,8 +8,9 @@ _EOF
 
 rename_function cmd_create orig_cmd_create
 cmd_create() {
+    local code_dir=$(dirname $(realpath $APP_DIR))
     orig_cmd_create \
-        --volume $APPS/dbox:/usr/local/src/labdoo \
+        --volume $code_dir:/usr/local/src/labdoo \
         --volume $(pwd)/var-www:/var/www \
         --workdir /var/www \
         --env CODE_DIR=/usr/local/src/labdoo \
