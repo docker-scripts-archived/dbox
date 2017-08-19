@@ -66,7 +66,7 @@ may break the application.
     git clone https://github.com/dashohoxha/myproject /opt/docker-scripts/myproject
     ```
 
-  - Create a directory for the moodle container: `ds init myproject/ds @proj-example-org`
+  - Create a directory for the container: `ds init myproject/ds @proj-example-org`
 
   - Fix the settings:
     ```
