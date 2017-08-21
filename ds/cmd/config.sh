@@ -18,6 +18,7 @@ cmd_config() {
     ds runcfg install/misc-config
 
     if [[ -n $DEV ]]; then
+        ds runcfg phpmyadmin
         ds runcfg dev/config
         ds runcfg dev/make-dev-clone
     fi

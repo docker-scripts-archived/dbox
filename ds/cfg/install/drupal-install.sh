@@ -48,8 +48,7 @@ $drush --yes features-revert lbd_captcha
 #$drush --yes pm-update
 
 ### refresh and update translations
-if [ "$development" != 'true' ]
-then
+if [[ -z $DEV ]]; then
     $drush --yes l10n-update-refresh
     $drush --yes l10n-update
 fi
