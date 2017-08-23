@@ -29,26 +29,26 @@ drush site-install --verbose --yes labdoo \
       --account-name="$account_name" --account-pass="$account_pass" --account-mail="$account_mail"
 
 ### install additional features
-drush="drush --root=$DRUPAL_DIR"
-$drush --yes pm-enable lbd_layout
-$drush --yes features-revert lbd_layout
+drush="drush --root=$DRUPAL_DIR --yes"
+$drush pm-enable lbd_layout
+$drush features-revert lbd_layout
 
-$drush --yes pm-enable lbd_content
+$drush pm-enable lbd_content
 
-$drush --yes pm-enable lbd_captcha
-$drush --yes features-revert lbd_captcha
+$drush pm-enable lbd_captcha
+$drush features-revert lbd_captcha
 
-#$drush --yes pm-enable lbd_invite
-#$drush --yes pm-enable lbd_simplenews
-#$drush --yes pm-enable lbd_mass_contact
-#$drush --yes pm-enable lbd_googleanalytics
+#$drush pm-enable lbd_invite
+#$drush pm-enable lbd_simplenews
+#$drush pm-enable lbd_mass_contact
+#$drush pm-enable lbd_googleanalytics
 
 ### update to the latest version of core and modules
-#$drush --yes pm-refresh
-#$drush --yes pm-update
+#$drush pm-refresh
+#$drush pm-update
 
 ### refresh and update translations
 if [[ -z $DEV ]]; then
-    $drush --yes l10n-update-refresh
-    $drush --yes l10n-update
+    $drush l10n-update-refresh
+    $drush l10n-update
 fi

@@ -1,5 +1,6 @@
 #!/bin/bash -x
 
+source /host/settings.sh
 new_domain=${1:-$DOMAIN}
 
 ### get the current domain

@@ -40,8 +40,7 @@ a2enmod ssl
 a2dissite 000-default
 a2ensite lbd
 a2enmod headers rewrite
-ln -sf /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
-a2enconf downloads phpmyadmin
+a2enconf downloads
 
 ### create a script to check for apache2, and start it if not running
 cat <<'EOF' > /usr/local/sbin/apachemonitor.sh

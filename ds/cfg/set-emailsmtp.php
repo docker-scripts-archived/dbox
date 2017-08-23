@@ -1,4 +1,4 @@
-#!/usr/local/bin/drush @lbd php-script
+#!/usr/local/bin/drush @local_lbd php-script
 <?php
    /**
     * Set drupal variables related to email and smtp.
@@ -41,7 +41,7 @@ $aid1 = actions_save(
   'system',
   array(
     'recipient' => $email,
-    'subject' => '[lbd] New user: [user:name]',
+    'subject' => '[bcl] New user: [user:name]',
     'message' => 'New user: [user:name]',
   ),
   t('Send e-mail to admin when a new user is registered')
@@ -51,7 +51,7 @@ $aid2 = actions_save(
   'system',
   array(
     'recipient' => $email,
-    'subject' => '[lbd] [user:name] has modified his account',
+    'subject' => '[bcl] [user:name] has modified his account',
     'message' => 'The user [user:name] has modified his account.',
   ),
   t('Send e-mail to admin when user modifies his account')
