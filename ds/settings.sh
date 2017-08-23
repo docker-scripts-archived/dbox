@@ -1,4 +1,4 @@
-APP=dbox/ds
+APP=labdoo/ds
 
 ### Docker settings.
 IMAGE=labdoo
