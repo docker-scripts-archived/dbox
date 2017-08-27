@@ -103,7 +103,7 @@ may break the application.
 
     ds runcfg set-adminpass <new-drupal-admin-passwd>
     ds runcfg set-domain <new.domain>
-    ds runcfg emailsmtp <gmail-user> <gmail-passwd>
+    ds runcfg set-emailsmtp <gmail-user> <gmail-passwd>
 
     ds runcfg dev/clone proj proj_test
     ds runcfg dev/clone_rm proj_test
