@@ -34,6 +34,9 @@ cp -a libraries/bootstrap themes/contrib/bootstrap/
 cp -a libraries/bootstrap themes/labdoo/
 cp libraries/bootstrap/less/variables.less themes/labdoo/less/
 
+### copy the logo file to the drupal dir
+ln -s $DRUPAL_DIR/profiles/labdoo/labdoo.png $DRUPAL_DIR/logo.png
+
 ### set propper directory permissions
 mkdir -p $DRUPAL_DIR/sites/all/translations
 chown -R www-data: $DRUPAL_DIR/sites/all/translations
