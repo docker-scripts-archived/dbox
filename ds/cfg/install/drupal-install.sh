@@ -10,7 +10,7 @@ site_name="Labdoo"
 site_mail="$GMAIL_ADDRESS"
 account_name=admin
 account_pass="$ADMIN_PASS"
-account_mail="$ADMIN_EMAIL"
+account_mail="$GMAIL_ADDRESS"
 
 ### create the database and user
 mysql='mysql --defaults-file=/etc/mysql/debian.cnf'

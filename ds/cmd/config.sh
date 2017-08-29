@@ -17,15 +17,15 @@ cmd_config() {
     ds runcfg install/set-prompt
     ds runcfg install/misc-config
 
-    if [[ -n $DEV ]]; then
-        ds runcfg phpmyadmin
-        ds runcfg dev/config
-        ds runcfg dev/make-dev-clone
-    fi
-
-    ds runcfg emailsmtp $GMAIL_ADDRESS "$GMAIL_PASSWD"
+    ds runcfg set-emailsmtp
     #ds runcfg set-domain $DOMAIN
     #ds runcfg set-adminpass "$ADMIN_PASS"
+
+    if [[ -n $DEV ]]; then
+        ds runcfg phpmyadmin
+        ds runcfg dev/make-dev-clone
+        ds runcfg dev/config @lbd_dev
+    fi
 
     # drush may create some files with wrong permissions, fix them
     ds runcfg fix-file-permissions
