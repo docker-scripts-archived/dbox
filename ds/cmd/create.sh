@@ -15,7 +15,8 @@ cmd_create() {
         --mount type=bind,src=$(pwd)/var-www,dst=/var/www \
         --workdir /var/www \
         --env CODE_DIR=/usr/local/src/labdoo \
-        --env DRUPAL_DIR=/var/www/lbd
+        --env DRUPAL_DIR=/var/www/lbd \
+        "$@"    # accept additional options, e.g.: -p 2201:22
 
     rm -f labdoo
     ln -s var-www/lbd/profiles/labdoo .
