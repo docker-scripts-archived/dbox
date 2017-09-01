@@ -38,8 +38,9 @@ cp libraries/bootstrap/less/variables.less themes/labdoo/less/
 ln -s $DRUPAL_DIR/profiles/labdoo/labdoo.png $DRUPAL_DIR/logo.png
 
 ### set propper directory permissions
-mkdir -p $DRUPAL_DIR/sites/all/translations
-chown -R www-data: $DRUPAL_DIR/sites/all/translations
+cd $DRUPAL_DIR
+mkdir -p sites/all/translations
+chown -R www-data: sites/all/translations
 mkdir -p sites/default/files/
 chown -R www-data: sites/default/files/
 mkdir -p cache/
