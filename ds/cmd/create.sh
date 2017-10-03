@@ -21,4 +21,7 @@ cmd_create() {
 
     rm -f labdoo
     ln -s var-www/lbd/profiles/labdoo .
+
+    # create the database
+    ds mariadb create
 }

@@ -2,7 +2,7 @@
 ### drush may create some files with wrong (root) permissions
 ### fix them (change owner to www-data)
 
-for dir in /var/www/lbd*/sites/default/files/*; do
+for dir in /var/www/lbd*/cache/ /var/www/lbd*/sites/default/files/* ; do
     chown www-data: -R $dir
 done
 

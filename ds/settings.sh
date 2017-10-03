@@ -19,3 +19,10 @@ GMAIL_PASSWD=
 
 ### Admin settings.
 ADMIN_PASS=123456
+
+### DB settings
+DBHOST=mariadb
+DBPORT=3306
+DBNAME=lbd
+DBUSER=lbd
+DBPASS=lbd
