@@ -11,11 +11,8 @@ cmd_clone() {
     local tag=$1
     [[ -n $tag ]] || fail "Usage:\n $(cmd_clone_help)"
 
-    if [[ -d var-www/lbd_$tag ]]; then
-        echo "The clone 'lbd_$tag' already exists."
-        echo "Delete it first with: ds clone-del $tag"
-        exit 1
-    fi
+    # delete it first if it exists
+    ds clone-del $tag
 
     # clone the db
     local dbname="${DBNAME}_${tag}"
