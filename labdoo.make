@@ -51,7 +51,7 @@ projects[edit_profile] = 1.0-beta2
 projects[wysiwyg] = 2.4
 
 ;;; Security
-projects[captcha] = 1.4
+projects[captcha] = 1.5
 projects[recaptcha] = 2.2
 projects[honeypot] = 1.22
 projects[user_restrictions] = 1.0
@@ -72,7 +72,7 @@ projects[uuid] = 1.0
 projects[module_filter] = 2.1
 projects[drush_language] = 1.5
 projects[delete_all] = 1.1
-projects[l10n_update] = 2.1
+projects[l10n_update] = 2.2
 
 ;;; Performance
 projects[boost] = 1.2
@@ -91,7 +91,7 @@ projects[mailsystem] = 2.34
 projects[mimemail] = 1.0
 projects[reroute_email] = 1.2
 
-projects[phpmailer] = 3.0-beta3
+projects[phpmailer] = 3.0-beta4
 
 libraries[phpmailer][directory_name] = phpmailer
 libraries[phpmailer][download][type] = get
