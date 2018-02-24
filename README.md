@@ -64,7 +64,7 @@ may break the application.
 
   - Get the code of `myproject` from GitHub, like this:
     ```
-    git clone https://github.com/dashohoxha/myproject /opt/docker-scripts/myproject
+    git clone https://github.com/Utkarsh-Mishra-CIC/myproject /opt/docker-scripts/myproject
     ```
 
   - Create a directory for the container: `ds init myproject/ds @proj-example-org`
