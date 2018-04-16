@@ -22,6 +22,9 @@ drush="drush --root=$DRUPAL_DIR --yes"
 $drush pm-enable lbd_layout
 $drush features-revert lbd_layout
 
+$drush pm-enable bootstrap
+$drush pm-enable labdoo
+
 $drush pm-enable lbd_content
 
 $drush pm-enable lbd_captcha
