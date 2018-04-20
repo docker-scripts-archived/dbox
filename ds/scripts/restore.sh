@@ -18,3 +18,6 @@ drush @lbd php-script $(pwd)/restore-private-vars-lbd.php
 
 # restore twitter configuration
 [[ -f trc ]] && cp trc /home/twitter/.trc
+
+# custom restore script
+[[ -f /host/restore.sh ]] && source /host/restore.sh
