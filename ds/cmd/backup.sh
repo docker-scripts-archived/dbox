@@ -41,7 +41,8 @@ _make_app_backup() {
 
     # dump the content of the databases
     ds exec drush @$app sql-dump \
-           --result-file=/host/$backup/$app.sql
+       --extra="--hex-blob --compress" \
+       --result-file=/host/$backup/$app.sql
 
     # copy app files to the backup dir
     cp -a var-www/$app $backup
@@ -69,6 +70,7 @@ _make_full_backup() {
 
     # dump the content of the database
     ds exec drush @lbd sql-dump \
+       --extra="--hex-blob --compress" \
        --result-file=/host/$backup/lbd.sql
 
     # copy app files to the backup dir
@@ -77,6 +79,7 @@ _make_full_backup() {
     # backup also the lbd_dev
     if [[ -d var-www/lbd_dev ]]; then
         ds exec drush @lbd_dev sql-dump \
+           --extra="--hex-blob --compress" \
            --result-file=/host/$backup/lbd_dev.sql
         cp -a var-www/lbd_dev $backup/
     fi
