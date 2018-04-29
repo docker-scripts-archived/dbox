@@ -26,3 +26,8 @@ DBPORT=3306
 DBNAME=lbd
 DBUSER=lbd
 DBPASS=lbd
+
+# If you want to use Redis, put its hostname or IP address here
+# Else you can comment out this variable or set as empty.
+# Default value is 'redis'.
+REDIS_HOST=redis

@@ -29,4 +29,6 @@ cmd_config() {
 
     # drush may create some files with wrong permissions, fix them
     ds inject fix-file-permissions.sh
+
+    ds inject install/redis-config.sh
 }
