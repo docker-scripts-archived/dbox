@@ -5,7 +5,7 @@ if [ -n "$REDIS_HOST" ];
 then
 	drupal_settings=$DRUPAL_DIR/sites/default/settings.php
 	drush="drush --root=$DRUPAL_DIR --yes"
-	$drush @local_proj dl redis
+	$drush @local_${DRUPAL_DIR} dl redis
 	apt install -y php-redis redis-tools
 	echo "
 // Redis settings
