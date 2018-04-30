@@ -1,13 +1,15 @@
 #!/bin/bash -x
 source /host/settings.sh
 
-if [ -n "$REDIS_HOST" ];
-then
-	drupal_settings=$DRUPAL_DIR/sites/default/settings.php
-	drush="drush --root=$DRUPAL_DIR --yes"
-	$drush `drush sa | head -n 1` dl redis # use first site e.g. @local_proj
-	apt install -y php-redis redis-tools
-	echo "
+drupal_settings=$DRUPAL_DIR/sites/default/settings.php
+drush="drush --root=$DRUPAL_DIR --yes"
+$drush dl redis # use first site e.g. @local_proj
+apt install -y php-redis redis-tools
+
+### check if REDIS_HOST is not empty, else exit
+[[ -n $REDIS_HOST ]] || exit 0 
+
+cat << EOF "
 // Redis settings
 \$conf['redis_client_interface'] = 'PhpRedis';
 \$conf['redis_client_host'] = '$REDIS_HOST';
@@ -17,6 +19,6 @@ then
 \$conf['cache_default_class'] = 'Redis_Cache';
 " >> $drupal_settings
 
-	service apache2 restart
-fi
+service apache2 restart
+
 

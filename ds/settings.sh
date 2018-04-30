@@ -27,8 +27,10 @@ DBNAME=lbd
 DBUSER=lbd
 DBPASS=lbd
 
-# If you want to use Redis, put its hostname or IP address here
-# Else you can comment out this variable or set as empty.
-# Default value is 'redis'.
+### Uncomment #REDIS_HOST=redis to enable Drupal Redis module.
+### Change hostname if needed.
+### You must have a server running Redis to use this feature 
+### (e.g. install `redis` docker-scripts container, https://github.com/docker-scripts/redis)
+
 REDIS_HOST=
 #REDIS_HOST=redis
