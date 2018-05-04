@@ -12,6 +12,7 @@ cmd_config() {
     ds inject install/drupal-make.sh
     ds inject install/drupal-install.sh
     ds inject install/drupal-config.sh
+    ds inject install/redis-config.sh
     ds inject install/drush-config.sh
     ds inject install/apache2.sh
     ds inject install/set-prompt.sh
@@ -29,6 +30,4 @@ cmd_config() {
 
     # drush may create some files with wrong permissions, fix them
     ds inject fix-file-permissions.sh
-
-    ds inject install/redis-config.sh
 }
