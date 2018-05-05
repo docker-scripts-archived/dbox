@@ -15,5 +15,5 @@ cat << EOF >> $DRUPAL_DIR/sites/default/settings.php
 \$conf['path_inc'] = 'sites/all/modules/redis/redis.path.inc';
 \$conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
 \$conf['cache_default_class'] = 'Redis_Cache';
-\$conf['cache_prefix'] = '$CONTAINER';
+\$conf['cache_prefix'] = '$CONTAINER:lbd';
 EOF
