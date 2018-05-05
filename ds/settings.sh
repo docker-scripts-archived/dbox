@@ -26,3 +26,11 @@ DBPORT=3306
 DBNAME=lbd
 DBUSER=lbd
 DBPASS=lbd
+
+### Uncomment #REDIS_HOST=redis to enable Drupal Redis module.
+### Change hostname if needed.
+### You must have a server running Redis to use this feature 
+### (e.g. install `redis` docker-scripts container, https://github.com/docker-scripts/redis)
+
+REDIS_HOST=
+#REDIS_HOST=redis

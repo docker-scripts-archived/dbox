@@ -18,7 +18,8 @@ cp -a $src_dir $dst_dir
 domain=$tag.$DOMAIN
 sed -i $dst_dir/sites/default/settings.php \
     -e "/^\\\$databases = array/,+10  s/'database' => .*/'database' => '$dst',/" \
-    -e "/^\\\$base_url/c \$base_url = \"https://$domain\";"
+    -e "/^\\\$base_url/c \$base_url = \"https://$domain\";" \
+    -e "/cache_prefix/ s/:lbd/:$dst/"
 
 ### create a drush alias
 sed -i /etc/drush/local_lbd.aliases.drushrc.php \
