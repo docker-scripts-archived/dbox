@@ -11,6 +11,7 @@ cat << EOF >> $DRUPAL_DIR/sites/default/settings.php
 // Redis settings
 \$conf['redis_client_interface'] = 'PhpRedis';
 \$conf['redis_client_host'] = '$REDIS_HOST';
+\$conf['redis_client_password'] = '$REDIS_PASS';
 \$conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
 \$conf['path_inc'] = 'sites/all/modules/redis/redis.path.inc';
 \$conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
