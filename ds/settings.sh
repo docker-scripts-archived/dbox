@@ -11,9 +11,9 @@ DEV=true
 ### Other domains.
 DOMAINS="dev.lbd.example.org tst.lbd.example.org"
 
-### Gmail account for notifications.
-### Make sure to enable less-secure-apps:
-### https://support.google.com/accounts/answer/6010255?hl=en
+### Gmail account for notifications. This will be used by ssmtp.
+### You need to create an application specific password for your account:
+### https://www.lifewire.com/get-a-password-to-access-gmail-by-pop-imap-2-1171882
 GMAIL_ADDRESS=lbd.example.org@gmail.com
 GMAIL_PASSWD=
 
@@ -27,10 +27,8 @@ DBNAME=lbd
 DBUSER=lbd
 DBPASS=lbd
 
-### Uncomment #REDIS_HOST=redis to enable Drupal Redis module.
-### Change hostname if needed.
-### You must have a server running Redis to use this feature 
-### (e.g. install `redis` docker-scripts container, https://github.com/docker-scripts/redis)
-
-REDIS_HOST=
+### Uncomment REDIS_HOST to enable Drupal Redis module. Change hostname if needed.
+### You must have a server running Redis to use this feature, for example install
+### 'redis' docker-scripts container: https://github.com/docker-scripts/redis
 #REDIS_HOST=redis
+#REDIS_PASS='ohhebahQuahghaingeef1ifeitah5yei'
