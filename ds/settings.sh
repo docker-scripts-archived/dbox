@@ -2,14 +2,14 @@ APP=labdoo/ds
 
 ### Docker settings.
 IMAGE=labdoo
-CONTAINER=lbd-example-org
+CONTAINER=lbd.example.org
 DOMAIN="lbd.example.org"
 
 ### Uncomment if this installation is for development.
 DEV=true
 
 ### Other domains.
-DOMAINS="dev.lbd.example.org tst.lbd.example.org"
+DOMAINS="dev.$DOMAIN tst.$DOMAIN"
 
 ### Gmail account for notifications. This will be used by ssmtp.
 ### You need to create an application specific password for your account:
