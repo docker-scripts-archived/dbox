@@ -67,11 +67,11 @@ may break the application.
     git clone https://github.com/<username>/myproject /opt/docker-scripts/myproject
     ```
 
-  - Create a directory for the container: `ds init myproject/ds @proj-example-org`
+  - Create a directory for the container: `ds init myproject/ds @proj.example.org`
 
   - Fix the settings:
     ```
-    cd /var/ds/proj-example-org/
+    cd /var/ds/proj.example.org/
     vim settings.sh
     ```
 
@@ -95,6 +95,13 @@ may break the application.
     https://proj.example.org in browser.
 
 
+## Backup and restore
+
+    ds backup data
+    ds backup
+    ds restore <backup-file.tgz>
+
+
 ## Other commands
 
     ds help
@@ -111,6 +118,3 @@ may break the application.
     ds inject dev/clone.sh test
     ds inject dev/clone-del.sh test
     ds inject dev/clone.sh 01
-
-    ds backup [proj1]
-    ds restore <backup-file.tgz> [proj1]
