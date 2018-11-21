@@ -113,7 +113,8 @@ may break the application.
 
     ds inject set-adminpass.sh <new-drupal-admin-passwd>
     ds inject set-domain.sh <new.domain>
-    ds inject set-emailsmtp.sh <gmail-user> <gmail-passwd>
+    ds inject set-emailsmtp.sh 'smtp_server' <smtp-server> <smtp-domain>
+    ds inject set-emailsmtp.sh 'gmail_account' <gmail-user> <gmail-passwd>
 
     ds inject dev/clone.sh test
     ds inject dev/clone-del.sh test
