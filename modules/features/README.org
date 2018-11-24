@@ -14,7 +14,7 @@
      installation of the application, without having to repeat them
      manually.
   3. Make the application structured (as opposed to monolithic).  For
-     example drupalchat is offered as a feature and can be installed
+     example simplenews is offered as a feature and can be installed
      very easily by installing the feature.  But sites that do not
      want to use it just don't install that feature.
 
@@ -88,14 +88,12 @@
   It creates a feature on the directory:
   ~/var/www/lbd_dev/profiles/labdoo/modules/features/lbd_layout/~
 
-  Other features that I have created are: /lbd_disqus/,
-  /lbd_invite/, /lbd_sharethis/,
-  /lbd_captcha/, /lbd_drupalchat/,
-  /lbd_janrain/, /lbd_simplenews/,
-  /lbd_mass_contact/, /lbd_googleanalytics/, etc.  In
-  order to recreate them easily, the script =create-features.sh= can
-  be used. It will create a feature for each list of components that
-  is on the directory ~components/~.
+  Other features that I have created are: /lbd_disqus/, /lbd_invite/,
+  /lbd_sharethis/, /lbd_captcha/, /lbd_janrain/, /lbd_simplenews/,
+  /lbd_mass_contact/, /lbd_googleanalytics/, etc.  In order to recreate
+  them easily, the script =create-features.sh= can be used. It will
+  create a feature for each list of components that is on the
+  directory ~components/~.
 
   The file ~create-features.sh~ has a content like this:
   #+BEGIN_EXAMPLE
