@@ -79,6 +79,8 @@ may break the application.
 
   - Build image, create the container and configure it: `ds make`
 
+  - Customize the local command 'remake': `vim cmd/remake.sh`
+
 
 ## Access the website
 
